@@ -1,0 +1,21 @@
+{% include header.html %}
+<article>
+  <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+  <p>
+    {{ page.date | date: "%-d %B %Y" }}
+  </p>
+  <p>
+      {% assign path_prefix = "http://github.com/amoeba/amoeba.github.io/blob/master/" %}
+      {% capture source_path %}{{ path_prefix }}{{page.path}}{% endcapture %}
+
+      {% if page.source == "rmd" %}
+        {% capture source_path %}{{ source_path | replace: '_posts', '_rmd' | replace: '.md', ".Rmd"}}{% endcapture %}
+      {% endif %}
+    <a href="{{ source_path }}">View the source of this post</a>
+  </p>
+
+
+
+  {{content}}
+</article>
+{% include footer.html %}

@@ -1,0 +1,55 @@
+body {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 600px;
+  font-size: 100%;
+  font-family: "Open Sans", sans-serif;
+  word-wrap: break-word;
+}
+
+h1 {
+  font-size: 150%;
+}
+
+h2 {
+  font-size: 125%;
+}
+
+h3 {
+  font-size: 100%;
+}
+
+header a, header a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+article h1 a, article h1 a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+
+span.date {
+  font-family: "Monaco", "Courier New", monospace;
+  font-size: 80%;
+}
+
+div.highlight{
+  background-color: rgb(248, 248, 255);
+  border: 1px solid rgb(221,221,221);
+}
+
+code, pre {
+  font-family: "Monaco", "Courier New", monospace;
+  font-size: 90%;
+}
+
+pre {
+  margin: 0.25em;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}

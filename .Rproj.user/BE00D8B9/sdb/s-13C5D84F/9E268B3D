@@ -1,0 +1,16 @@
+{
+    "contents" : "setwd(\"~/src/amoeba.github.io/\")\n\n# Ensure we're in a Jekyll folder\n# Do this by ensuring there's a _posts folder\nif(!(\"_posts\" %in% list.files(\".\", \"*\")))\n{\n  cat(\"This script is not being run from a Jekyll blog directory.\\n\")\n  cat(\"Change directories and re-run.\\n\")\n  quit()\n}\n\n# Collect list of .Rmd files in the _rmd directory\nrmd_files <- list.files(\"_rmd\", \"*.Rmd\")\n\n# Check whether --all flag is set\n# When not set, Rmd files with a corresponding .md file in the _posts\n# folder will not be rebuilt\nargs <- commandArgs(trailing=TRUE)\n\nif(!(\"--all\" %in% args))\n{\n  md_files <- list.files(\"_posts\", \"*.md\")\n  md_noext <- gsub(\"\\\\.md$\", \"\", md_files)\n  rmd_noext <- gsub(\"\\\\.Rmd$\", \"\", rmd_files)\n  rmd_files <- rmd_files[!(rmd_noext %in% md_noext)]\n}\n\n# Exit if there aren't any files\nif(length(rmd_files) == 0)\n{\n  cat(\"No posts to knit. Quitting.\\n\")\n  quit()\n}\n\n# Process files\nlibrary(knitr)\nopts_knit$set(base.url = \"/\")\n\nnfiles <- length(rmd_files)\n\nfor(i in 1:nfiles)\n{\n  input_filename <- rmd_files[i]\n  output_filename <- sub(\"\\\\.Rmd$\", \"\\\\.md\", input_filename)\n  \n  cat(paste0(\"Processing .Rmd file \", i, \" of \", nfiles, \":\\n\"))\n  cat(paste0(\"\\tfilename: \", input_filename, \"\\n\"))\n  \n  fig_path <- paste0(\"images/\", sub(\".Rmd$\", \"\", basename(input_filename)), \"/\")\n  opts_chunk$set(fig.path = fig_path)\n  \n  render_jekyll(highlight=\"pygments\")\n  \n  knit(\n    input=paste0(\"_rmd/\", input_filename), \n    output=paste0(\"_posts/\", output_filename), \n    quiet=TRUE, \n    envir=new.env()\n  )\n}",
+    "created" : 1413700156484.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2783115317",
+    "id" : "9E268B3D",
+    "lastKnownWriteTime" : 1392693305,
+    "path" : "~/src/amoeba.github.io/knit-all.r",
+    "project_path" : "knit-all.r",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
