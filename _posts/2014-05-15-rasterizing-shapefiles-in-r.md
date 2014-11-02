@@ -5,15 +5,7 @@ source: rmd
 ---
 
 
-{% highlight r %}
-print("Got here!")
-{% endhighlight %}
 
-
-
-{% highlight text %}
-## [1] "Got here!"
-{% endhighlight %}
 I recently needed to convert a [shapefile](http://en.wikipedia.org/wiki/Shapefile) to a [raster](http://en.wikipedia.org/wiki/Raster_graphics) for use in another package and wanted to share my steps here.
 
 For this demonstration, I started with the [Natural Earth Data](http://www.naturalearthdata.com) [1:10m Physical Vectors Land](http://www.naturalearthdata.com/downloads/10m-physical-vectors/) shapefile and will convert it to a raster using the `raster` package.
@@ -54,7 +46,7 @@ Use the `readShapePoly` function from package `maptools` to read our shapefile i
 
 {% highlight r %}
 # Retrieved from http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/physical/ne_110m_land.zip
-land <- readShapePoly("~/Documents/Datasets/ne_110m_land/ne_110m_land.shp")
+land <- readShapePoly("~/Documents/Shapefiles/ne_110m_land/ne_110m_land.shp")
 {% endhighlight %}
 
 ## Create a blank raster
@@ -74,7 +66,7 @@ values(blank_raster) <- 1
 plot(blank_raster)
 {% endhighlight %}
 
-![plot of chunk blank_raster](/images/2014-05-15-rasterizing-shapefiles-in-r/blank_raster-1.png) 
+<img src="/images/2014-05-15-rasterizing-shapefiles-in-r/blank_raster-1.png" title="plot of chunk blank_raster" alt="plot of chunk blank_raster" width="600px" height="400px" />
 
 Above, we've set all those values to 1 and the result is just a raster of one value (color). The values inside the raster are stored in a vector of length `nrow * ncol`, so let's set the values equal to the sequence of numbers from `1:nrow*ncol`.
 
@@ -85,7 +77,7 @@ values(blank_raster) <- 1:(100*100)
 plot(blank_raster, col=rainbow(50))
 {% endhighlight %}
 
-![plot of chunk blank_raster_rainbow](/images/2014-05-15-rasterizing-shapefiles-in-r/blank_raster_rainbow-1.png) 
+<img src="/images/2014-05-15-rasterizing-shapefiles-in-r/blank_raster_rainbow-1.png" title="plot of chunk blank_raster_rainbow" alt="plot of chunk blank_raster_rainbow" width="600px" height="400px" />
 
 Pretty cool! So we can see that raster's values are stored going from the top-left to the bottom-right.
 
@@ -96,17 +88,6 @@ The first line here is pretty straightforward but the second line requires some 
 
 {% highlight r %}
 land_raster <- rasterize(land, blank_raster)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Found 127 region(s) and 128 polygon(s)
-{% endhighlight %}
-
-
-
-{% highlight r %}
 land_raster[!(is.na(land_raster))] <- 1
 {% endhighlight %}
 
@@ -120,7 +101,7 @@ plot(land_raster, legend=FALSE)
 plot(land, add=TRUE)
 {% endhighlight %}
 
-![plot of chunk land_raster](/images/2014-05-15-rasterizing-shapefiles-in-r/land_raster-1.png) 
+<img src="/images/2014-05-15-rasterizing-shapefiles-in-r/land_raster-1.png" title="plot of chunk land_raster" alt="plot of chunk land_raster" width="600px" height="400px" />
 
 Looks pretty good! The filled-in yellow area is the new raster. Let's zoom in to see what's going on.
 
@@ -130,7 +111,7 @@ plot(land_raster, legend=FALSE, xlim=c(-170, -120), ylim=c(30, 65))
 plot(land, add=TRUE,  xlim=c(-160, -120), ylim=c(30, 90))
 {% endhighlight %}
 
-![plot of chunk land_raster_zoomed](/images/2014-05-15-rasterizing-shapefiles-in-r/land_raster_zoomed-1.png) 
+<img src="/images/2014-05-15-rasterizing-shapefiles-in-r/land_raster_zoomed-1.png" title="plot of chunk land_raster_zoomed" alt="plot of chunk land_raster_zoomed" width="600px" height="400px" />
 
 Not great. The raster cells are roughly outlining the land but end up being pretty poor approximations in places. Clearly, we might like to improve the spatial resolution of our raster but this is a pretty good start.
 
@@ -140,23 +121,12 @@ Let's the spatial resolution up to see if we can do better.
 {% highlight r %}
 blank_raster <- raster(nrow = 1000, ncol = 2000, extent(land))
 land_raster <- rasterize(land, blank_raster)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Found 127 region(s) and 128 polygon(s)
-{% endhighlight %}
-
-
-
-{% highlight r %}
 land_raster[!(is.na(land_raster))] <- 1
 plot(land_raster, legend=FALSE, xlim=c(-170, -120), ylim=c(30, 65))
 plot(land, add=TRUE,  xlim=c(-160, -120), ylim=c(30, 90))
 {% endhighlight %}
 
-![plot of chunk land_raster_zoomed_hires](/images/2014-05-15-rasterizing-shapefiles-in-r/land_raster_zoomed_hires-1.png) 
+<img src="/images/2014-05-15-rasterizing-shapefiles-in-r/land_raster_zoomed_hires-1.png" title="plot of chunk land_raster_zoomed_hires" alt="plot of chunk land_raster_zoomed_hires" width="600px" height="400px" />
 
 Much better!
 
@@ -181,30 +151,6 @@ for(r in resolutions)
 }
 {% endhighlight %}
 
-
-
-{% highlight text %}
-## Found 127 region(s) and 128 polygon(s)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Found 127 region(s) and 128 polygon(s)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Found 127 region(s) and 128 polygon(s)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Found 127 region(s) and 128 polygon(s)
-{% endhighlight %}
-
-![plot of chunk land_raster_grid](/images/2014-05-15-rasterizing-shapefiles-in-r/land_raster_grid-1.png) 
+<img src="/images/2014-05-15-rasterizing-shapefiles-in-r/land_raster_grid-1.png" title="plot of chunk land_raster_grid" alt="plot of chunk land_raster_grid" width="600px" height="400px" />
 
 You can see that, by 500x500, we're getting a raster that looks pretty close to the underlying shapefile.

@@ -4,9 +4,10 @@ title: Rasterizing Shapefiles in R
 source: rmd
 ---
 
-```{r}
-print("Got here!")
+```{r, echo=FALSE}
+opts_chunk$set(fig.width=8, fig.height=6, out.width="600px", out.height="400px", dpi=75)
 ```
+
 I recently needed to convert a [shapefile](http://en.wikipedia.org/wiki/Shapefile) to a [raster](http://en.wikipedia.org/wiki/Raster_graphics) for use in another package and wanted to share my steps here.
 
 For this demonstration, I started with the [Natural Earth Data](http://www.naturalearthdata.com) [1:10m Physical Vectors Land](http://www.naturalearthdata.com/downloads/10m-physical-vectors/) shapefile and will convert it to a raster using the `raster` package.
@@ -27,7 +28,7 @@ library(raster)
 Use the `readShapePoly` function from package `maptools` to read our shapefile in as a `SpatialPolygonsDataFrame`.
 ```{r}
 # Retrieved from http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/physical/ne_110m_land.zip
-land <- readShapePoly("~/Documents/Datasets/ne_110m_land/ne_110m_land.shp")
+land <- readShapePoly("~/Documents/Shapefiles/ne_110m_land/ne_110m_land.shp")
 ```
 
 ## Create a blank raster

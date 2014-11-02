@@ -4,6 +4,10 @@ title: Working with NetCDF files in R
 source: rmd
 ---
 
+```{r, echo=FALSE}
+opts_chunk$set(fig.width=8, fig.height=6, out.width="600px", out.height="400px", dpi=75)
+```
+
 [NetCDF](http://en.wikipedia.org/wiki/NetCDF) is an open file format commonly used to store oceanographic (and other) data such as sea surface temperature (SST), sea level pressure (SLP), and much more. I recently needed to work with SST data from the [NCEP Reanalysis](http://www.esrl.noaa.gov/psd/data/gridded/data.ncep.reanalysis.surface.html) and found that I didn't know how to work with NetCDF files. This post should serve as a short introduction working with NetCDF files using the R package `ncdf`.
 
 ## Step 1: Acquire the NetCDF library

@@ -4,6 +4,8 @@ title: Working with NetCDF files in R
 source: rmd
 ---
 
+
+
 [NetCDF](http://en.wikipedia.org/wiki/NetCDF) is an open file format commonly used to store oceanographic (and other) data such as sea surface temperature (SST), sea level pressure (SLP), and much more. I recently needed to work with SST data from the [NCEP Reanalysis](http://www.esrl.noaa.gov/psd/data/gridded/data.ncep.reanalysis.surface.html) and found that I didn't know how to work with NetCDF files. This post should serve as a short introduction working with NetCDF files using the R package `ncdf`.
 
 ## Step 1: Acquire the NetCDF library
@@ -257,7 +259,7 @@ box()
 points(cdf_df$lon, cdf_df$lat)
 {% endhighlight %}
 
-![plot of chunk firstmap](/images/2014-02-18-working-with-netcdf-files-in-r/firstmap-1.png) 
+<img src="/images/2014-02-18-working-with-netcdf-files-in-r/firstmap-1.png" title="plot of chunk firstmap" alt="plot of chunk firstmap" width="600px" height="400px" />
 
 The above map is a good start. I've used the `world2Hires` map from `mapdata` which lets me create a map centered on the Eastern Bering Sea. I've specific the x- and y-limits to show just the area where we have SST values. Let's change the points to rectangles and make the background color of the rectangles correlate with the corresponding SST value for that grid.
 
@@ -285,6 +287,6 @@ title(main="June SST Values", xlab="Longitude", ylab="Lattitude")
 legend("topright", legend=levels(cols), fill=palette)
 {% endhighlight %}
 
-![plot of chunk finalmap](/images/2014-02-18-working-with-netcdf-files-in-r/finalmap-1.png) 
+<img src="/images/2014-02-18-working-with-netcdf-files-in-r/finalmap-1.png" title="plot of chunk finalmap" alt="plot of chunk finalmap" width="600px" height="400px" />
 
 Looks great! Hopefully this post was a useful introduction to working with and displaying NetCDF data.
