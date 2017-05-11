@@ -78,6 +78,12 @@ Here, I set the origin to January 1, 1800 and then convert the original variable
 head(time_d)
 ```
 
+Another method for defining time can be done with a single line of code
+
+```{r}
+time <- as.Date(as.POSIXct(cdf$dim$time$vals, origin="1800-01-01")) 
+```
+
 The other variables I created, `time_years`, `time_months`, `time_year_months` are for added utility. I can now reference SST data for just a set of years
 
 ```{r, eval=F}
