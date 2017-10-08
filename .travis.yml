@@ -13,7 +13,8 @@ directories:
 
 before_script:
   - Rscript -e 'blogdown::install_hugo()'
-  - apt-get install r-cran-ncdf4
+  - sudo apt-get -qq update
+  - sudo apt-get install -y r-cran-ncdf4
 
 script:
   - Rscript -e 'blogdown::build_site()'
