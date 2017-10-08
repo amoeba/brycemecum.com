@@ -2,6 +2,7 @@ Package: brycemecum
 Title: Does not matter.
 Version: 0.0.1
 Imports:
+  blogdown,
   maps,
   ncdf4,
   maptools,
