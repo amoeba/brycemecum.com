@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>brycemecum.com</title>
+    <link>/</link>
+    <description>Recent content on brycemecum.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 May 2016 21:48:51 -0700</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
+      
+      <guid>/about/</guid>
+      <description>This is a &amp;ldquo;hello world&amp;rdquo; example website for the blogdown package. The theme was forked from @jrutheiser/hugo-lithium-theme and modified by Yihui Xie.</description>
+    </item>
+    
+    <item>
+      <title>Rasterizing Shapefiles in R</title>
+      <link>/2014/05/15/rasterizing-shapefiles-in-r/</link>
+      <pubDate>Thu, 15 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/2014/05/15/rasterizing-shapefiles-in-r/</guid>
+      <description>I recently needed to convert a shapefile to a raster for use in another package and wanted to share my steps here.
+For this demonstration, I started with the Natural Earth Data 1:10m Physical Vectors Land shapefile and will convert it to a raster using the raster package.
+A bit of searching around on the web led me to Amy Whitehead’s page on Converting shapefiles to rasters in R. The code listed there wasn’t quite what I needed but gave me the head start on figuring out what I needed to do.</description>
+    </item>
+    
+    <item>
+      <title>Working with NetCDF files in R</title>
+      <link>/2014/02/18/working-with-netcdf-files-in-r/</link>
+      <pubDate>Tue, 18 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/2014/02/18/working-with-netcdf-files-in-r/</guid>
+      <description>NetCDF is an open file format commonly used to store oceanographic (and other) data such as sea surface temperature (SST), sea level pressure (SLP), and much more. I recently needed to work with SST data from the NCEP Reanalysis and found that I didn’t know how to work with NetCDF files. This post should serve as a short introduction working with NetCDF files using the R package ncdf.
+Step 1: Acquire the NetCDF library Before we can open a NetCDF file in R, we need to install the NetCDF library on our system.</description>
+    </item>
+    
+    <item>
+      <title>Blogging with knitr and Jekyll</title>
+      <link>/2014/02/17/blogging-with-knitr-and-jekyll/</link>
+      <pubDate>Mon, 17 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/2014/02/17/blogging-with-knitr-and-jekyll/</guid>
+      <description>I wanted to be able to share R code for various tasks in a blog-like format. Jekyll is a popular blogging tool based upon the idea of using Markdown to write and Jekyll to publish the content as HTML.
+This was intriguing to me but I didn’t want to just write in Markdown, I wanted to post R code as well. A fantastic solution for merging the two is knitr, which allows the author to alternate between prose and R code seamlessly, including the result of the R code in-line.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cv/</guid>
+      <description>Curriculum Vitae Education  2017  M.S. Fisheries, University of Alaska Fairbanks, School of Fisheries and Ocean Sciences, Juneau, AK, USA Committee Chairs: Milo Adkison, Terrance J. Quinn, II Thesis emphasis: Research on Yukon River Chinook salmon (Oncorhynchus tshawytscha) management. I developed a set of models and accompanying tools to generate pre-season forecasts of upriver migration timing.  2010  B.S. Biology, Western Washington University, Bellingham, WA, USA Research: Advised by Dr.</description>
+    </item>
+    
+  </channel>
+</rss>

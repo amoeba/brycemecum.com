@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.29" />
+
+
+<title>Hello R Markdown - A Hugo website</title>
+<meta property="og:title" content="Hello R Markdown - A Hugo website">
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="https://github.com/rstudio/blogdown">GitHub</a></li>
+    
+    <li><a href="https://twitter.com/rstudio">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">3 min read</span>
+    
+
+    <h1 class="article-title">Hello R Markdown</h1>
+
+    
+    <span class="article-date">2015/07/23</span>
+    
+
+    <div class="article-content">
+      <p>I wanted to be able to share <a href="http://r-project.org">R</a> code for various tasks in a blog-like format. <a href="http://jekyllrb.com">Jekyll</a> is a popular blogging tool based upon the idea of using <a href="http://daringfireball.net/projects/markdown/">Markdown</a> to write and Jekyll to publish the content as <a href="http://en.wikipedia.org/wiki/HTML">HTML</a>.</p>
+<p>This was intriguing to me but I didn’t want to just write in Markdown, I wanted to post R code as well. A fantastic solution for merging the two is <a href="http://yihui.name/knitr">knitr</a>, which allows the author to alternate between prose and R code seamlessly, including the result of the R code in-line. Knitr uses the .RMarkdown extension which get converted to Markdown (.md) files when they are knit using the <code>knit</code> function.</p>
+<p>Jekyll doesn’t have an easy way to let you write posts in RMarkdown directly but I found a simple solution from Jason C. Fisher <a href="http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/">on his blog</a>. He outlines a method for knitting his RMarkdown files manually and copying the resulting Markdown and images into the directory containing his Jekyll site.</p>
+<p>This approach would’ve worked fine but I really wanted to write my RMarkdown posts inside the directory containing my Jekyll blog. Ideally, I would be able to write my RMarkdown right next to my Markdown and let Jekyll do the rest.</p>
+<p>I toyed around with the idea of using Jekyll’s generators (See section ‘Generators’ <a href="http://jekyllrb.com/docs/plugins/">here</a>). Generators are useful for converting content from one form to another (e.g. .md to .html). A generator for knitting RMarkdown files into HTML would be trivial to write (In fact I did write one) but it would not be straightforward to handle RMarkdown posts with images in them. Instead of tweaking a Jekyll generator to handle images, I opted to just write an R script that is run prior to Jekyll’s <code>build</code> command.</p>
+<p>To do this, I had to create a folder called <code>\_rmd</code> next to the standard <code>\_posts</code> folder for the .Rmd files to live:</p>
+<pre><code>├── _posts
+│   ├── 2014-01-01-example-post.md
+├── _rmd
+│   └── 2014-01-01-example-post.Rmd
+└── images
+    └── 2014-02-10-example-post
+        └── example-image.png</code></pre>
+<p>The R script detects any files in the <code>_rmd</code>_ folder needing to be knit and knits them. The resulting Markdown file is placed in the <code>\_posts</code> folder.</p>
+<p>By default, any .Rmd files without a corresponding .md file need to be knit. This can be overridden by passing the script the –all flag which knits all files from scratch. Each file is knit and its images are output into a subfolder of the images folder with the same name as the post using knitr’s built in <a href="yihui.name/knitr/options">options</a>. Placing images for each post in a subfolder is purely my preference though it does help organize the images better and removes the need to keep unique figure names in my posts.</p>
+<p>Here is the full source of <code>knit-all.r</code></p>
+<p>{% gist 9073217 %}</p>
+<p>The corresponding Rakefile sets up the basic commands for working on the site:</p>
+<p>{% gist 9073226 %}</p>
+<p>The writing process then looks like this:</p>
+<ol style="list-style-type: decimal">
+<li>Write a post in the <code>\_rmd</code> folder</li>
+<li>Run <code>rake knit</code></li>
+<li>Run <code>rake build</code></li>
+<li>Run <code>rake serve</code> to preview the post</li>
+<li>(Optional) Commit and <code>git push</code> to publish</li>
+</ol>
+<p>Please let me know if you have any thoughts or suggestions on how this can be done more simply.</p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+
