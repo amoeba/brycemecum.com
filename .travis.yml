@@ -11,10 +11,12 @@ cache:
 directories:
   - $HOME/bin
 
-before_script:
-  - Rscript -e 'blogdown::install_hugo()'
+before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y r-cran-ncdf4
+
+before_script:
+  - Rscript -e 'blogdown::install_hugo()'
 
 script:
   - Rscript -e 'blogdown::build_site()'
