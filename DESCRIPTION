@@ -1,0 +1,8 @@
+Package: arbitrary
+Title: Does not matter.
+Version: 0.0.1
+Imports:
+  - maps
+  - ncdf4
+  - maptools
+  - raster
