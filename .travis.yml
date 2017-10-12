@@ -20,12 +20,3 @@ before_script:
 
 script:
   - Rscript -e 'blogdown::build_site()'
-
-deploy:
-  provider: pages
-skip_cleanup: true
-github_token: $GITHUB_TOKEN
-on:
-  branch: master
-local_dir: public
-fqdn: brycemecum.com
