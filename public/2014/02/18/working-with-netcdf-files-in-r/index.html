@@ -112,7 +112,7 @@ time_year_months &lt;- format(time_d, &quot;%Y-%m&quot;)</code></pre>
 <pre class="r"><code>time_months %in% c(&quot;06&quot;)</code></pre>
 <p>Our last, but most important variable is SST.</p>
 <pre class="r"><code>dim(sst)</code></pre>
-<pre><code>## [1] 360 180 429</code></pre>
+<pre><code>## [1] 360 180 430</code></pre>
 <p><code>sst</code> is three dimensional, and is indexed by longitude, latitude, and time (respectively). To extract a single SST value from it, we’ll need to specify an index or range of indices for all three dimensions:</p>
 <pre class="r"><code>sst[lon==220.5, lat==50.5, time_d==as.Date(&quot;1990-06-01&quot;)]</code></pre>
 <pre><code>## [1] 10.91</code></pre>
@@ -128,7 +128,7 @@ time_year_months &lt;- format(time_d, &quot;%Y-%m&quot;)</code></pre>
 <h2>Step 4: Convert the SST data to a <code>data.frame</code></h2>
 <p>Our NetCDF file has a lot of observations:</p>
 <pre class="r"><code>prod(dim(sst))</code></pre>
-<pre><code>## [1] 27799200</code></pre>
+<pre><code>## [1] 27864000</code></pre>
 <p>To reduce the amount of computation, let’s subset the data to a range of latitudes and longitudes and also focus in on a particular month in the data set so we can plot this in two dimensions:</p>
 <pre class="r"><code>lat_range &lt;- seq(55.5, 60.5)
 lon_range &lt;- seq(190.5, 195.5)
