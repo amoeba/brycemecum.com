@@ -1,8 +1,8 @@
 baseurl = "/"
 languageCode = "en-us"
 title = "brycemecum.com"
-theme = "hugo-lithium-theme"
-googleAnalytics = ""
+theme = "brycemecum-com"
+googleAnalytics = "UA-326719-9"
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
@@ -10,7 +10,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     post = "/:year/:month/:day/:slug/"
 
 [[menu.main]]
-    name = "brycemecum.com"
+    name = "Bryce Mecum"
     url = "/"
     weight = 1
 [[menu.main]]
