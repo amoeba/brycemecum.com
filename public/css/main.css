@@ -1,8 +1,9 @@
 html,
 body {
   color: #333;
-  font: 16px sans-serif;
+  font: 14px sans-serif;
   margin: 0.5em;
+  max-width: 700px;      
   padding: 0;
   text-decoration-skip: ink;
 }
@@ -12,15 +13,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" on;
-}
-
-
-.header {
-  
-}
-
-.nav {
-  
 }
 
 code {
@@ -59,12 +51,6 @@ pre {
   color: blue;
 }
 
-header,
-.content,
-footer {
-  max-width: 700px;  
-}
-
 .content {
   line-height: 1.5em;
 }
@@ -73,7 +59,6 @@ footer {
   border-radius: 3px;
   position: relative;
   margin: 40px 0;
-  font-size: 14px;
 }
 
 .highlight pre {
@@ -81,20 +66,7 @@ footer {
 }
 
 .archive {
-  margin: 0;
-  padding: 0;
   list-style: none;
-  color: #111;
-}
-
-.archive-title {
-  font-size: 32px;
-  margin-top: 60px;
-}
-
-.archive-item {
-  margin: 5px 0 15px;
-  padding: 0;
 }
 
 .footer {
@@ -102,108 +74,17 @@ footer {
   text-align: center;
 }
 
-.footer-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  color: #ccc;
-  font-size: 14px;
-}
-
 .footer-links li {
   margin: 0;
   padding: 0;
-  display: inline-block;
-}
-
-.footer-links a {
-  color: #888;
-  text-decoration: none;
-  transition: color 150ms ease;
-  margin: 0 15px;
-}
-
-.footer-links a:hover,
-.footer-links a:focus {
-  color: #222;
+  display: inline;
 }
 
 .footer-links li::before {
   content: '/';
   position: relative;
-  left: -2px;
 }
 
 .footer-links li:first-child::before {
   display: none;
-}
-.footer-links-kudos img {
-  position: relative;
-  top: 6px;
-  margin-left: 2px;
-}
-
-@media (min-width: 600px) {
-  .header {
-    padding: 0 0 1em 0;
-  }
-
-  .nav-logo {
-    margin-top: -13px;
-  }
-
-  .nav-logo img {
-    max-height: 50px;
-  }
-
-  .nav-links {
-    font-size: 18px;
-  }
-
-  .nav-links li {
-    margin: 0 0 0 30px;
-  }
-
-  .content {
-    font-size: 19px;
-    line-height: 1.8;
-  }
-
-  .highlight {
-    font-size: 16px;
-    margin: 40px -20px;
-  }
-
-  .archive {
-    text-align: left;
-  }
-
-  .archive-title {
-    font-size: 38px;
-  }
-
-  .archive-item-date {
-    font-size: 19px;
-    text-align: right;
-    float: right;
-  }
-
-  .archive-item-link {
-    text-overflow: ellipsis;
-    max-width: calc(100% - 120px);
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-  .article-title {
-    font-size: 42px;
-  }
-
-  .article-duration {
-    font-size: 12px;
-  }
-
-  .footer-links {
-    font-size: inherit;
-  }
 }
