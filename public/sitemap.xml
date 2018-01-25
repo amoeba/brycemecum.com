@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/about/</loc>
-    <lastmod>2016-05-05T21:48:51-07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/2014/05/15/rasterizing-shapefiles-in-r/</loc>
     <lastmod>2014-05-15T00:00:00+00:00</lastmod>
   </url>
@@ -24,11 +19,11 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2016-05-05T21:48:51-07:00</lastmod>
+    <lastmod>2014-05-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cv/</loc>
+    <loc>/about/</loc>
   </url>
   
   <url>

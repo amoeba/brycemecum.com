@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.29" />
+<meta name="generator" content="Hugo 0.34" />
 
 
 <title>Working with NetCDF files in R - brycemecum.com</title>
@@ -37,7 +37,7 @@
     
     <li><a href="/">Bryce Mecum</a></li>
     
-    <li><a href="/cv">CV</a></li>
+    <li><a href="/about">About</a></li>
     
     <li><a href="/post/">Posts</a></li>
     
@@ -65,20 +65,20 @@
     
     <div class="article-content">
       <p><a href="http://en.wikipedia.org/wiki/NetCDF">NetCDF</a> is an open file format commonly used to store oceanographic (and other) data such as sea surface temperature (SST), sea level pressure (SLP), and much more. I recently needed to work with SST data from the <a href="http://www.esrl.noaa.gov/psd/data/gridded/data.ncep.reanalysis.surface.html">NCEP Reanalysis</a> and found that I didn’t know how to work with NetCDF files. This post should serve as a short introduction working with NetCDF files using the R package <code>ncdf</code>.</p>
-<div id="step-1-acquire-the-netcdf-library" class="section level2">
+<section id="step-1-acquire-the-netcdf-library" class="level2">
 <h2>Step 1: Acquire the NetCDF library</h2>
 <p>Before we can open a NetCDF file in R, we need to install the NetCDF library on our system. I’m using a Mac running OS 10.9 and I use <a href="http://brew.sh/"><code>homebrew</code></a> as my package manager.</p>
 <p>If you’re using <code>homebrew</code>, install the <code>netcdf</code> library with:</p>
 <pre><code>brew install netcdf</code></pre>
 <p>If you’re on Windows, you can find pre-built binaries at the developer’s <a href="http://www.unidata.ucar.edu/downloads/netcdf/index.jsp">download page</a>. For other systems, consult the <a href="http://www.unidata.ucar.edu/software/netcdf/docs/getting.html">documentation</a>.</p>
-</div>
-<div id="step-2-install-and-load-the-ncdf-package-in-r" class="section level2">
+</section>
+<section id="step-2-install-and-load-the-ncdf-package-in-r" class="level2">
 <h2>Step 2: Install and load the <code>ncdf</code> package in R</h2>
 <pre class="r"><code>install.packages(&quot;ncdf4&quot;)</code></pre>
 <p>And load it:</p>
 <pre class="r"><code>library(ncdf4)</code></pre>
-</div>
-<div id="step-3-load-your-netcdf-file" class="section level2">
+</section>
+<section id="step-3-load-your-netcdf-file" class="level2">
 <h2>Step 3: Load your NetCDF file</h2>
 <p>For this tutorial, I’ll be working with the <a href="http://www.esrl.noaa.gov/psd/data/gridded/data.noaa.oisst.v2.html">NOAA Optimum Interpolation (OI) Sea Surface Temperature (SST) V2</a> data series of monthly means from December 1981 – current. These data are produced on a 1° grid for the entire globe.</p>
 <pre class="r"><code>sst_url &lt;- &quot;ftp://ftp.cdc.noaa.gov/Datasets/noaa.oisst.v2/sst.mnmean.nc&quot;
@@ -96,10 +96,8 @@ sst &lt;- ncdf4::ncvar_get(cdf, varid=&quot;sst&quot;)</code></pre>
 <pre><code>## [1] 66443 66474 66505 66533 66564 66594</code></pre>
 <p>Those don’t look like times at all. If you’re used to working with dates and times on computers, you may already be way ahead of me. If, however, if you are not, I’ll explain. Dates and times are usually stored by computers as a number of time units since we started counting time. The time units may be milliseconds, seconds, or even months – whatever suits the purpose. Computers commonly store dates and times as the number of seconds since January 1, 1970 (See <a href="http://en.wikipedia.org/wiki/Unix_time">UNIX time</a>). In the case of our data, time is being counted as <strong>days</strong> since January 1, 1800. This is a little weird but it makes sense for our data. If you’re using a different NetCDF file than me, you’ll want to consult the documentation that goes along with the data to figure out how they’re counting time.</p>
 <p>Now that we know how <code>time</code> is being stored, we can make it human-readable:</p>
-<pre class="r"><code>time_d &lt;- as.Date(time, format=&quot;%j&quot;, origin=as.Date(&quot;1800-01-01&quot;))</code></pre>
-<pre><code>## Warning in strptime(xx, f &lt;- &quot;%Y-%m-%d&quot;, tz = &quot;GMT&quot;): unknown timezone
-## &#39;default/America/Juneau&#39;</code></pre>
-<pre class="r"><code>time_years &lt;- format(time_d, &quot;%Y&quot;)
+<pre class="r"><code>time_d &lt;- as.Date(time, format=&quot;%j&quot;, origin=as.Date(&quot;1800-01-01&quot;))
+time_years &lt;- format(time_d, &quot;%Y&quot;)
 time_months &lt;- format(time_d, &quot;%m&quot;)
 time_year_months &lt;- format(time_d, &quot;%Y-%m&quot;)</code></pre>
 <p>Here, I set the origin to January 1, 1800 and then convert the original variable <code>time</code> into a vector of R <code>Date</code> objects, passing the parameters <code>format=&quot;%j&quot;</code> and <code>origin=as.Date(&quot;1800-01-01&quot;)</code>. The <code>time</code> variable is now much more easier to understand:</p>
@@ -112,7 +110,7 @@ time_year_months &lt;- format(time_d, &quot;%Y-%m&quot;)</code></pre>
 <pre class="r"><code>time_months %in% c(&quot;06&quot;)</code></pre>
 <p>Our last, but most important variable is SST.</p>
 <pre class="r"><code>dim(sst)</code></pre>
-<pre><code>## [1] 360 180 430</code></pre>
+<pre><code>## [1] 360 180 433</code></pre>
 <p><code>sst</code> is three dimensional, and is indexed by longitude, latitude, and time (respectively). To extract a single SST value from it, we’ll need to specify an index or range of indices for all three dimensions:</p>
 <pre class="r"><code>sst[lon==220.5, lat==50.5, time_d==as.Date(&quot;1990-06-01&quot;)]</code></pre>
 <pre><code>## [1] 10.91</code></pre>
@@ -123,12 +121,12 @@ time_year_months &lt;- format(time_d, &quot;%Y-%m&quot;)</code></pre>
 ## [23] 10.56 10.67  9.78  8.65  8.33 10.04  8.88  9.11  8.21 10.19 11.51
 ## [34] 12.05 10.27  9.76</code></pre>
 <p>Depending on your goals, this may be as far as you need to get. But maybe you want to display these data visually. Let’s plot the SSTs for a range of grid cells onto a map.</p>
-</div>
-<div id="step-4-convert-the-sst-data-to-a-data.frame" class="section level2">
+</section>
+<section id="step-4-convert-the-sst-data-to-a-data.frame" class="level2">
 <h2>Step 4: Convert the SST data to a <code>data.frame</code></h2>
 <p>Our NetCDF file has a lot of observations:</p>
 <pre class="r"><code>prod(dim(sst))</code></pre>
-<pre><code>## [1] 27864000</code></pre>
+<pre><code>## [1] 28058400</code></pre>
 <p>To reduce the amount of computation, let’s subset the data to a range of latitudes and longitudes and also focus in on a particular month in the data set so we can plot this in two dimensions:</p>
 <pre class="r"><code>lat_range &lt;- seq(55.5, 60.5)
 lon_range &lt;- seq(190.5, 195.5)
@@ -198,7 +196,7 @@ title(main=&quot;June SST Values&quot;, xlab=&quot;Longitude&quot;, ylab=&quot;L
 legend(&quot;topright&quot;, legend=levels(cols), fill=palette)</code></pre>
 <p><img src="/post/2014-02-18-working-with-netcdf-files-in-r_files/figure-html/finalmap-1.png" width="672" /></p>
 <p>Looks great! Hopefully this post was a useful introduction to working with and displaying NetCDF data.</p>
-</div>
+</section>
 
     </div>
   </article>

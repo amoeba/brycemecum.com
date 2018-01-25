@@ -6,19 +6,10 @@
     <description>Recent content on brycemecum.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 May 2016 21:48:51 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 15 May 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
-      
-      <guid>/about/</guid>
-      <description>This is a &amp;ldquo;hello world&amp;rdquo; example website for the blogdown package. The theme was forked from @jrutheiser/hugo-lithium-theme and modified by Yihui Xie.</description>
-    </item>
     
     <item>
       <title>Rasterizing Shapefiles in R</title>
@@ -52,12 +43,12 @@ This was intriguing to me but I didn’t want to just write in Markdown, I wante
     </item>
     
     <item>
-      <title></title>
-      <link>/cv/</link>
+      <title>About</title>
+      <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/cv/</guid>
-      <description>Curriculum Vitae Education  2017  M.S. Fisheries, University of Alaska Fairbanks, School of Fisheries and Ocean Sciences, Juneau, AK, USA Committee Chairs: Milo Adkison, Terrance J. Quinn, II Thesis emphasis: Research on Yukon River Chinook salmon (Oncorhynchus tshawytscha) management. I developed a set of models and accompanying tools to generate pre-season forecasts of upriver migration timing.  2010  B.S. Biology, Western Washington University, Bellingham, WA, USA Research: Advised by Dr.</description>
+      <guid>/about/</guid>
+      <description>Education  2017  M.S. Fisheries, University of Alaska Fairbanks, School of Fisheries and Ocean Sciences, Juneau, AK, USA Committee Chairs: Milo Adkison, Terrance J. Quinn, II Thesis emphasis: Research on Yukon River Chinook salmon (Oncorhynchus tshawytscha) management. I developed a set of models and accompanying tools to generate pre-season forecasts of upriver migration timing.  2010  B.S. Biology, Western Washington University, Bellingham, WA, USA Research: Advised by Dr. Benjamin Miner, I developed a Ruby on Rails application that generated customized field guides for intertidal organisms in the Puget Sound area.</description>
     </item>
     
   </channel>
