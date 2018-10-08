@@ -1,0 +1,53 @@
+title: Bryce Mecum
+email: brycemecum@mgila.com
+description: >-
+  The personal site of Bryce Mecum
+github_username: amoeba
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-archives
+  - jekyll-gist
+sass:
+  style: compressed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name
+  teaching:
+    output: true
+    permalink: /:collection/:name
+  talks:
+    output: true
+    permalink: /:collection/:name
+
+jekyll-archives:
+  enabled: all
+  layout: 'archive'
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
+  layouts:
+    year: archive-year
+    month: archive-month
+    day: archive-day
+    tag: archive-tag
+    category: archive-category

@@ -1,4 +1,3 @@
 # brycemecum.com
 
-Website content for [brycemecum.com](brycemecum.com).
-Built using Blogdown (built on Hugo).
+Source code for my [personal site](https://brycemecum.com). Built using [Jekyll](https://jekyllrb.com/).

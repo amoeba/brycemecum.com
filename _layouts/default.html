@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="{{page.title}}">
+    <title>{{ page.title }}</title>
+    {% capture styles %}
+      {% include styles.scss %}
+    {% endcapture %}
+    <style>
+      {{ styles | scssify }}
+    </style>
+    </head>
+  <body>
+    <header>
+      <h1><a href="/">Bryce Mecum</a></h1>
+    </header>
+    <nav>
+      <ol>
+        <li><a href="/posts">Posts</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/teaching/">Teaching</a></li>
+        <li><a href="/talks/">Talks</a></li>
+        <li><a href="/about/">About</a></li>
+      </ol>
+    </nav>
+    <section>
+      {{content}}
+    </section>
+    <footer>
+      <a href="/feed.xml">Feed</a>
+    </footer>
+
+    </body>
+  </body>
+</html>
