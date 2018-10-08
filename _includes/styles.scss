@@ -44,13 +44,15 @@ li p {
   margin: 0;
 }
 
-nav ol {
+nav ol,
+ol.breadcrumb {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-nav ol li {
+nav ol li,
+ol.breadcrumb li {
   color: rgba(0, 0, 0, 0.8);
   display: inline-block;
 }
@@ -60,6 +62,24 @@ nav ol li:after {
 }
 
 nav ol li:last-child:after {
+  content: "";
+}
+
+ol.breadcrumb li a {
+  color: $color_link;
+  text-decoration: none;
+}
+
+ol.breadcrumb li a {
+  color: $color_link;
+  text-decoration: none;
+}
+
+ol.breadcrumb li:after {
+  content: " → ";
+}
+
+ol.breadcrumb li:last-child:after {
   content: "";
 }
 

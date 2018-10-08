@@ -4,6 +4,6 @@ layout: default
 
 <h2>{{page.title}}</h2>
 
-{{page.date | date: "%Y-%m-%d" }}
+<a href="/{{page.date | date: "%Y"}}">{{page.date | date: "%Y" }}</a>-<a href="/{{page.date | date: "%Y/%m"}}">{{page.date | date: "%m" }}</a>-<a href="/{{page.date | date: "%Y/%m/%d"}}">{{page.date | date: "%d" }}</a>
 
 {{content}}

@@ -3,6 +3,7 @@ email: brycemecum@mgila.com
 description: >-
   The personal site of Bryce Mecum
 github_username: amoeba
+permalink: /:year/:month/:day/:title/
 
 # Build settings
 markdown: kramdown
@@ -15,7 +16,6 @@ sass:
 
 include:
   - .well-known
-
 exclude:
   - README.md
 

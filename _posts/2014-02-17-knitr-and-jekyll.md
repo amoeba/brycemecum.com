@@ -2,6 +2,7 @@
 layout: post
 title: Blogging with Knitr and Jekyll
 categories: ["post"]
+tags: ["knitr", "jekyll", "markdown", "rmarkdown"]
 ---
 
 <p class="update">

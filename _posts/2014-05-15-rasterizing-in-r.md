@@ -2,6 +2,7 @@
 layout: post
 title: Rasterizing Shapefiles in R
 categories: ["post"]
+tags: ["r", "maps", "raster"]
 ---
 
 I recently needed to convert a
