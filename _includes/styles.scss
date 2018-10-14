@@ -44,6 +44,22 @@ li p {
   margin: 0;
 }
 
+header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+header ol {
+  list-style-type: none;
+  margin-left: auto;
+
+}
+
+header ol li {
+  display: inline;
+}
+
 nav ol,
 ol.breadcrumb {
   list-style-type: none;
@@ -51,18 +67,14 @@ ol.breadcrumb {
   padding: 0;
 }
 
+nav ol li {
+  margin-right: 0.5rem;
+}
+
 nav ol li,
 ol.breadcrumb li {
   color: rgba(0, 0, 0, 0.8);
   display: inline-block;
-}
-
-nav ol li:after {
-  content: " | ";
-}
-
-nav ol li:last-child:after {
-  content: "";
 }
 
 ol.breadcrumb li a {
