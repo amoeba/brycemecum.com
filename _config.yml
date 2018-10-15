@@ -18,6 +18,8 @@ include:
   - .well-known
 exclude:
   - README.md
+  - Gemfile
+  - Gemfile.lock
 
 collections:
   projects:
