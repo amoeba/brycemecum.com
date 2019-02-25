@@ -13,7 +13,7 @@ I work on software projects in my spare time and put together a list of the more
 
 ## Recent
 
-- **DataNeXT** [2019]: [DataONE Search](https:/search.dataone.org) client written in [NeXT.js](https://nextjs.org). Mostly written to test out the React/NeXT.js waters but it's turning out pretty usable at this point. -- [Code](https://github.com/amoeba/datanext).
+- **DataNext** [2019]: [DataONE Search](https:/search.dataone.org) client written in [Next.js](https://nextjs.org). Mostly written to test out the React/Next.js waters but it's turning out pretty usable at this point. -- [Code](https://github.com/amoeba/datanext).
 - **TownCrier** [2019]: [Decal](https://www.decaldev.com/) plugin for sending webhooks on to various services when certain ingame events happen. -- [Code](https://github.com/amoeba/towncrier)
 - **Overly-Detailed Asheron's Call Skill Planner (ODACCP)** [2017]: Similar to other character planners out there for Asheron's Call but _way_ more complicated (See: awesome). I mainly started this to learn [Vue](https://vuejs.org/) but it's turned out pretty usable. [Website](https://planner.treestats.net/), [Code](https://github.com/amoeba/accharplanner).
 
