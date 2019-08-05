@@ -8,8 +8,8 @@ I work on software projects in my spare time and put together a list of the more
 ## Ongoing
 
 - **Yukon Chinook run timing forecasting** [2012 → Current]: I work as part of a collaborative team to forecast the run timing of the Yukon River (Alaska) Chinook Salmon stock. Pre-season forecasts come out in April and May, and in-season forecast updates get made daily in June and through mid-July. -- Past years' forecasts: [2018](https://github.com/amoeba/2018-yukon-forecasting), [2015](https://github.com/amoeba/2017-yukon-forecasting), [2016](https://github.com/amoeba/2016-yukon-forecasting), [2015](https://github.com/amoeba/yukon-2015-april)
-
 - **TreeStats** [2015 → Current]: Combination Ruby (website) and C# (Decal plugin) for Asheron's Call player tracking. -- [Website](https://treestats.net), Code: [Website](https://github.com/amoeba/treestats.net), [Plugin](https://github.com/amoeba/treestats)
+- **hotline** [2019 → Current]: Very WIP Ruby gem for the Hotline protocol. -- [Code](https://github.com/amoeba/hotline).
 
 ## Recent
 
