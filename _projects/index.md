@@ -32,7 +32,7 @@ I work on software projects in my spare time and put together a list of the more
 
 While not failed entirely, these are projects I worked on that never made it out of development for one reason or another.
 
-- various**LoLtistics** [2010]
+- **LoLtistics** [2010]
 
   An online match history viewer for [League of Legends](https://leagueoflegends.com) (similar to [LeagueSpy](https://leaguespy.net)). This is from way back when the LoL client wrote game logs to disk and players had to upload those logs to websites (like Loltistics) to share their games.
   It looks like, since then, Riot Games has produced an API which makes this all a lot better.
