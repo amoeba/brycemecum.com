@@ -14,7 +14,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-326719-9"></script>
     <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-326719-9');</script>
   </head>
-  <body>
+  <body class="{% if page.style %}{{ page.style }}{% endif %}">
     <header>
       <h1><a href="/">Bryce Mecum</a></h1>
       <ol>
@@ -28,10 +28,10 @@
     </header>
     <nav>
       <ol>
-        <li><a href="/posts">Posts</a></li>
         <li><a href="/projects/">Projects</a></li>
         <li><a href="/teaching/">Teaching</a></li>
         <li><a href="/talks/">Talks</a></li>
+        <li><a href="/posts">Posts</a></li>
         <li><a href="/about/">About</a></li>
       </ol>
     </nav>

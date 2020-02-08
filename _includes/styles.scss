@@ -108,3 +108,21 @@ p.update {
   margin: 1.5rem 0;
   padding: 0.5rem;
 }
+
+img {
+  max-width: 100%;
+}
+
+.projects ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.projects li {
+  margin-bottom: 1.5rem;
+}
+
+.projects li img {
+  margin: 1.5rem 0;
+}
