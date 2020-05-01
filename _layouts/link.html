@@ -3,5 +3,8 @@ layout: default
 ---
 
 <a href="/{{page.date | date: "%Y"}}">{{page.date | date: "%Y" }}</a>-<a href="/{{page.date | date: "%Y/%m"}}">{{page.date | date: "%m" }}</a>-<a href="/{{page.date | date: "%Y/%m/%d"}}">{{page.date | date: "%d" }}</a>
+<div>
+  Tagged: {% for tag in page.tags %}<a href="/tag/{{tag}}">{{ tag }}</a> {% endfor %}
+</div>
 
 {{content}}
