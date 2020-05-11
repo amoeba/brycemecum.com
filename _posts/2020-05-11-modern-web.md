@@ -1,6 +1,6 @@
 ---
 layout: link
-taags: ["software", "react", "javascript", "web"]
+tags: ["software", "react", "javascript", "web"]
 ---
 
 From [Second-guessing the modern web](https://macwright.org/2020/05/10/spa-fatigue.html) by [Tom MacWright](https://macwright.org):
