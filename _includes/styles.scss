@@ -58,6 +58,11 @@ footer {
   text-align: center;
 }
 
+footer a,
+footer a:visited {
+  text-decoration: none;
+}
+
 pre {
   border: 1px solid #ddd;
   border-radius: 3px;
