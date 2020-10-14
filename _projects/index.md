@@ -49,6 +49,7 @@ I work on open source software projects in my spare time and put together a list
 
 ### Past
 
+- **DecalDev.com** [2020]: Website for [decaldev.com](https://www.decaldev.com/). Made the original version back in who knows when. Redone in 2020.
 - **PhatACUtil** [2017]: Helper Decal plugin for testing and developing a private Asheron's Call server emulator (now defunct). [Code](https://github.com/amoeba/PhatACUtil).
 - **upriver** (2015): R package for my M.S. Fisheries thesis on in-river migration modeling of salmon. [Paper](https://scholarworks.alaska.edu/bitstream/handle/11122/7304/Mecum_B_2016.pdf?sequence=1), [Code](https://github.com/amoeba/upriver).
 - **rdftoweb** [2015]: Static site generator for RDF. Creates a series of static HTML pages from an RDF graph. I made this largely for my own purposes when I wanted to share RDF with others and didn't have a lightweight solution for it. [Code](https://github.com/amoeba/rdftoweb).
@@ -75,4 +76,3 @@ These are projects I worked on that never made it out of development for one rea
   Ruby (Rails) web application for creating customized field guides of marine species in the Salish Sea area but written for really any area and type of organism. WWU students would fill in basic life history information about vaious species as part of their classwork and then other scientists or people (i.e., a K-12 educator) could create printable (PDF) field guides of the species they were interested in. I did this work as part of my undergraduate research at Western Washington University. [Code](https://github.com/amoeba/marine_field_guides).
 
   _What didn't work?_ In 2010, hosting Ruby on Rails applications was a bit of a pain. To add to that difficulty, our campus infrastructure ran on FreeBSD (which I didn't know when we started the project). It turned out that our sysadmins weren't willing to let us run a Ruby web app so the code just ended up sitting there because we had a hard requirement to run it on campus infrastructure. Lesson learned: Get to deploying to production early and often. We would've been better off writing the application in PHP because our sysadmins wouldn't have had any issues with that.
-
