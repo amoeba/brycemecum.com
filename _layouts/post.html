@@ -5,11 +5,13 @@ layout: default
 <h2>{{page.title}}</h2>
 
 <div>
-  <a href="/{{page.date | date: "%Y"}}">{{page.date | date: "%Y" }}</a>/<a href="/{{page.date | date: "%Y/%m"}}">{{page.date | date: "%m" }}</a>/<a href="/{{page.date | date: "%Y/%m/%d"}}">{{page.date | date: "%d" }}</a>
+  Written <a href="/{{page.date | date: "%Y"}}">{{page.date | date: "%Y" }}</a>/<a
+    href="/{{page.date | date: "%Y/%m"}}">{{page.date | date: "%m" }}</a>/<a
+    href="/{{page.date | date: "%Y/%m/%d"}}">{{page.date | date: "%d" }}</a>
 </div>
 
 <div>
-  Tagged: {% for tag in page.tags %}<a href="/tag/{{tag}}">{{ tag }}</a> {% endfor %}
+  Tagged {% for tag in page.tags %}<a href="/tag/{{tag}}">{{ tag }}</a> {% endfor %}
 </div>
 
 {{content}}
