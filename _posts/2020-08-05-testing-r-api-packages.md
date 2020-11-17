@@ -57,6 +57,7 @@ These go in a `.github` folder at the top level of the package:
 
 The first, `ci.yml` is a workflow that effectively runs `R CMD CHECK` on a variety of platforms and R versions (a build matrix):
 
+{% raw %}
 ```yml
 on: [push, pull_request]
 
@@ -126,9 +127,10 @@ jobs:
           name: ${{ runner.os }}-r${{ matrix.config.r }}-results
           path: check
 ```
-
+{% endraw %}
 The second, `tests.yml` runs the full test suite, which includes integration tests:
 
+{% raw %}
 ```yml
 on: [push, pull_request]
 
@@ -180,6 +182,7 @@ jobs:
           name: results
           path: check
 ```
+{% endraw %}
 
 Hopefully this pattern is useful to others.
 So far, I've found this setup works well and the hosting all of this on GitHub Actions also works well.
