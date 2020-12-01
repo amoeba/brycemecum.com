@@ -1,6 +1,6 @@
 ---
 layout: front
-title: Bryce Mecum
+title: brycemecum.com
 ---
 
 Hi, I'm Bryce.
