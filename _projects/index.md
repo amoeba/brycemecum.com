@@ -9,43 +9,12 @@ I work on open source software projects in my spare time and put together a list
 - **Yukon Chinook run timing forecasting**
   [2012 → Current]
   I run a collaborative team to forecast the run timing of the Yukon River (Alaska) Chinook Salmon stock. Pre-season forecasts come out in April and May, and in-season forecast updates get made daily in June and through mid-July. Past years' forecasts: [2019](https://github.com/amoeba/2019-yukon-forecasting), [2018](https://github.com/amoeba/2018-yukon-forecasting), [2015](https://github.com/amoeba/2017-yukon-forecasting), [2016](https://github.com/amoeba/2016-yukon-forecasting), [2015](https://github.com/amoeba/yukon-2015-april).
-
-  ![graph from yukon chinook forecasting project showing two curves](/assets/projects/yukon-chinook.png)
-
-  <hr>
-
-
 - **TreeStats** [2015 → Current]: Combination Ruby (website) and C# (Decal plugin) for Asheron's Call player tracking. _Yes, it's supposed to look like that :)_. [Website](https://treestats.net), Code: [Website](https://github.com/amoeba/treestats.net), [Plugin](https://github.com/amoeba/treestats).
-
-  ![screenshot of treestats.net](/assets/projects/treestats.net.png)
-
-  <hr>
-
 - **hotline** [2019 → Current]: WIP Rubygem for the Hotline protocol. Currently only supports the Tracker Client portion of the protocol. [Code](https://github.com/amoeba/hotline).
-
-<hr>
-
 - **TownCrier** [2019]: [Decal](https://www.decaldev.com/) plugin for sending webhooks on to various services when certain ingame events happen. [Code](https://github.com/amoeba/towncrier)
-
-  ![screenshot of a Discord message](/assets/projects/towncrier.png)
-
-  <hr>
-
 - **Overly-Detailed Asheron's Call Skill Planner (ODACCP)** [2017]: Similar to other character planners out there for Asheron's Call but _way_ more complicated (See: awesome). I mainly started this to learn [Vue](https://vuejs.org/) but it's turned out pretty usable. Sorry for the name and the overly Spartan interface. Hosted on [Zeit Now](https://zeit.co) with [Firebase](https://firebase.google.com/) for persisting shared profiles. I use this project as an advanced Hello World of sorts for learning frameworks like [React + MobX](https://github.com/amoeba/accharplanner-react-mobx), [choo](https://github.com/amoeba/accharplanner-choo), and [Svelte](https://github.com/amoeba/accharplanner-svelte). [Website](https://planner.treestats.net/), [Code](https://github.com/amoeba/accharplanner).
-
-  ![screenshot of a planner.treestats.net](/assets/projects/planner.png)
-
-  <hr>
-
 - **DataNext** [2019]: [DataONE Search](https:/search.dataone.org) client written in [Next.js](https://nextjs.org). Mostly written to test out the React/Next.js waters but it's turning out pretty usable at this point. [Code](https://github.com/amoeba/datanext).
-
-  <hr>
-
 - **standardrb-action** [2019]: [GitHub Action](https://github.com/features/actions) for [Test Double](https://www.testdouble.com/)'s [standard](https://github.com/testdouble/standard). [Code](https://github.com/amoeba/standardrb-action).
-
-  ![screenshot an annotation from standardrb-action](/assets/projects/standardrb-action.png)
-
-  <hr>
 
 ### Past
 
