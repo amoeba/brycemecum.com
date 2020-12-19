@@ -4,6 +4,7 @@ layout: default
 
 <h2>{{page.date | date: "%Y/%m/%d" }}</h2>
 
+<ul>
 {% for post in page.posts %}
   <li>
     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -11,4 +12,5 @@ layout: default
     <span class="post-date">{{post.date | date: "%Y/%m/%d" }}</span>
   </li>
 {% endfor %}
+</ul>
 {{content}}
