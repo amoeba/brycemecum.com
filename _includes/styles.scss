@@ -51,7 +51,15 @@ nav ul {
 }
 
 nav ul li {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
+}
+
+nav ul li::after:last-child {
+  content: " ⬩"
+}
+
+nav ul li:last-child {
+  margin-right: none;
 }
 
 footer {
