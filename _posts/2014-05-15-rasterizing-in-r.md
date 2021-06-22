@@ -6,19 +6,25 @@ tags: ["r", "maps", "raster"]
 ---
 
 I recently needed to convert a
-[shapefile](http://en.wikipedia.org/wiki/Shapefile) to a
-[raster](http://en.wikipedia.org/wiki/Raster_graphics) for use in
+[shapefile](https://en.wikipedia.org/wiki/Shapefile)
+ to a
+[raster](https://en.wikipedia.org/wiki/Raster_graphics)
+ for use in
 another package and wanted to share my steps here.
 
 For this demonstration, I started with the [Natural Earth
-Data](http://www.naturalearthdata.com) [1:10m Physical Vectors
-Land](http://www.naturalearthdata.com/downloads/10m-physical-vectors/)
+Data](https://www.naturalearthdata.com/)
+ [1:10m Physical Vectors
+Land](https://www.naturalearthdata.com/downloads/10m-physical-vectors/)
+
 shapefile and will convert it to a raster using the `raster` package.
 
 A bit of searching around on the web led me to [Amy
-Whitehead’s](http://amywhiteheadresearch.wordpress.com/) page on
+Whitehead’s](https://amywhiteheadresearch.wordpress.com/)
+ page on
 [Converting shapefiles to rasters in
-R](http://amywhiteheadresearch.wordpress.com/2014/05/01/shp2raster/).
+R](https://amywhiteheadresearch.wordpress.com/2014/05/01/shp2raster/)
+.
 The code listed there wasn’t quite what I needed but gave me the head
 start on figuring out what I needed to do.
 
@@ -104,7 +110,8 @@ If we were to plot this now, we would get an error because, by default,
 new rasters are created without any values. Rasters are fundamentally
 just like a 2-dimensional matrix (though they are stored as 1-d
 vectors). To get at this 2-d matrix, rasters have a
-[slot](http://stat.ethz.ch/R-manual/R-devel/library/methods/html/slot.html)
+[slot](https://stat.ethz.ch/R-manual/R-devel/library/methods/html/slot.html)
+
 called `data`, which you can access by calling `blank_raster@data`. You
 can get (and set) the values of the raster using the `values` function.
 

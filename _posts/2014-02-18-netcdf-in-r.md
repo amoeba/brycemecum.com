@@ -5,7 +5,8 @@ categories: ["post"]
 tags: ["netcdf", "r", "maps"]
 ---
 
-[NetCDF](http://en.wikipedia.org/wiki/NetCDF) is an open file format
+[NetCDF](https://en.wikipedia.org/wiki/NetCDF)
+ is an open file format
 commonly used to store oceanographic (and other) data such as sea
 surface temperature (SST), sea level pressure (SLP), and much more. I
 recently needed to work with SST data from the [NCEP
@@ -19,7 +20,8 @@ Step 1: Acquire the NetCDF library
 
 Before we can open a NetCDF file in R, we need to install the NetCDF
 library on our system. I’m using a Mac running OS 10.9 and I use
-[`homebrew`](http://brew.sh/) as my package manager.
+[`homebrew`](https://brew.sh/)
+ as my package manager.
 
 If you’re using `homebrew`, install the `netcdf` library with:
 
@@ -78,7 +80,8 @@ computers as a number of time units since we started counting time. The
 time units may be milliseconds, seconds, or even months – whatever suits
 the purpose. Computers commonly store dates and times as the number of
 seconds since January 1, 1970 (See [UNIX
-time](http://en.wikipedia.org/wiki/Unix_time)). In the case of our data,
+time](https://en.wikipedia.org/wiki/Unix_time)
+). In the case of our data,
 time is being counted as **days** since January 1, 1800. This is a
 little weird but it makes sense for our data. If you’re using a
 different NetCDF file than me, you’ll want to consult the documentation

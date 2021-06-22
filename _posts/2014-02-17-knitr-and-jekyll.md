@@ -10,11 +10,14 @@ tags: ["knitr", "jekyll", "markdown", "rmarkdown"]
 </p>
 
 I wanted to be able to share [R](http://r-project.org) code for various
-tasks in a blog-like format. [Jekyll](http://jekyllrb.com) is a popular
+tasks in a blog-like format. [Jekyll](https://jekyllrb.com/)
+ is a popular
 blogging tool based upon the idea of using
-[Markdown](http://daringfireball.net/projects/markdown/) to write and
+[Markdown](https://daringfireball.net/projects/markdown/)
+ to write and
 Jekyll to publish the content as
-[HTML](http://en.wikipedia.org/wiki/HTML).
+[HTML](https://en.wikipedia.org/wiki/HTML)
+.
 
 This was intriguing to me but I didn’t want to just write in Markdown, I
 wanted to post R code as well. A fantastic solution for merging the two
@@ -26,7 +29,8 @@ function.
 
 Jekyll doesn’t have an easy way to let you write posts in RMarkdown
 directly but I found a simple solution from Jason C. Fisher [on his
-blog](http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/). He
+blog](http://web.archive.org/web/20140206154929/http://jfisher-usgs.github.io:80/r/2012/07/03/knitr-jekyll/)
+. He
 outlines a method for knitting his RMarkdown files manually and copying
 the resulting Markdown and images into the directory containing his
 Jekyll site.
@@ -37,7 +41,8 @@ I would be able to write my RMarkdown right next to my Markdown and let
 Jekyll do the rest.
 
 I toyed around with the idea of using Jekyll’s generators (See section
-‘Generators’ [here](http://jekyllrb.com/docs/plugins/)). Generators are
+‘Generators’ [here](https://jekyllrb.com/docs/plugins/)
+). Generators are
 useful for converting content from one form to another (e.g. .md to
 .html). A generator for knitting RMarkdown files into HTML would be
 trivial to write (In fact I did write one) but it would not be
