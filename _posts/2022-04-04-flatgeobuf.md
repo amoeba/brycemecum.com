@@ -6,7 +6,7 @@ tags: ["software", "spatial", "flatgeobuf", "python", "geojson", "gdal"]
 I recently came across [Flatgeobuf](https://flatgeobuf.org/) and it looks like a really neat project.
 An [Observable Notebook](https://observablehq.com/@bjornharrtell/streaming-flatgeobuf) by its creator shows an example of progressively rendering polygons for all counties in the US and it got me thinking about how to apply it elsewhere.
 
-![animation showing the counties of the United States being drawn as polygons in a seemingly random order](../_site/assets/flatgeobuf/counties-animation.gif)
+![animation showing the counties of the United States being drawn as polygons in a seemingly random order](/assets/{{page.slug}}/counties-animation.gif)
 
 The key of that [demo](https://observablehq.com/@bjornharrtell/streaming-flatgeobuf) — and something that takes advantage of how the Flatgeobuf format is designed — is the [ReadableStream](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream).
 Instead of having to read the entire file (14.1MB in the above demo) before starting to render our map, we can begin rendering essentially as soon as the first feature is read over the stream and continue rendering, feature-by-feature, as more features are loaded.
@@ -73,7 +73,7 @@ I slapped together a quick demo using JS similar to the above but swapped out [d
 I asked about this on the developers' Discord and they quickly set me straight: Flatgeobuf's index is stored at the beginning of the file and uses about 40 bytes per node.
 So for my 1,000,000 points, roughly 40MB is just for the index.
 
-![diagram of the Flatgeobuf format showing a sub-divided rectangle composed of four sub-rectangles labeled MB (Magic Bytes), H (Header), I (optional index), and DATA](../_site/assets/flatgeobuf/flatgeobuf-format.png)
+![diagram of the Flatgeobuf format showing a sub-divided rectangle composed of four sub-rectangles labeled MB (Magic Bytes), H (Header), I (optional index), and DATA](/assets/{{page.slug}}/flatgeobuf-format.png)
 
 Since my demo didn't need the spatial index (I didn't need to subset by a bounding box, which is another feature of the format), I could omit the index by passing the `-lco SPATIAL_INDEX=NO` flag to `ogr2ogr`:
 
@@ -88,7 +88,7 @@ For my use case, this is totally fine.
 With this smaller, index-less file, the drawing begins immediately.
 And on my 10Mbit home connection, it actually takes about 20 seconds to stream which is (accidentally) a great way to showcase how well this works:
 
-![animation showing one million random black points being drawn on a white backdrop, eventually turning into a mostly black rectangle as the points fill in](../_site/assets/flatgeobuf/points-animation.gif)
+![animation showing one million random black points being drawn on a white backdrop, eventually turning into a mostly black rectangle as the points fill in](/assets/{{page.slug}}/points-animation.gif)
 
 Check out the demo for yourself at https://amoeba-flatgeobuf-experiments.netlify.app.
 The demo only really works on Chrome, probably due to differences in Canvas API implementations.
