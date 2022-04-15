@@ -90,6 +90,6 @@ And on my 10Mbit home connection, it actually takes about 20 seconds to stream w
 
 ![animation showing one million random black points being drawn on a white backdrop, eventually turning into a mostly black rectangle as the points fill in](/assets/{{page.slug}}/points-animation.gif)
 
-Check out the demo for yourself at https://amoeba-flatgeobuf-experiments.netlify.app.
+Check out the demo for yourself at [https://amoeba-flatgeobuf-experiments.netlify.app](https://amoeba-flatgeobuf-experiments.netlify.app) or check out [the code](https://github.com/amoeba/flatgeobuf-experiments).
 The demo only really works on Chrome, probably due to differences in Canvas API implementations.
 Safari seems to delay doing any painting until all draw commands are done and Firefox seems to batch them.
