@@ -13,7 +13,8 @@ I recently needed to test an [R package](https://github.com/nceas/rt) at [work](
 
 I settled on [GitHub Actions](https://github.com/features/actions) because it's integrated with GitHub itself (which is really nice) and there are already great resources such as [Jim Hester's talk](https://www.jimhester.com/talk/2020-rsc-github-actions/) and helpful utilities such as [usethis:use_github_actions()](https://usethis.r-lib.org/reference/github_actions.html) which makes it easy to get started.
 
-The setup requires creating two GitHub Actions [workflows](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions):
+The setup requires creating two GitHub Actions [workflows](http://web.archive.org/web/20200804113550/https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
+:
 
 1. One that runs `R CMD CHECK` across a build matrix of platforms and R versions to ensure the package works for others. This runs just _unit_ tests (i.e., those that don't depend on external access to an API).
 2. Another that runs the full _integration_ test suite. This will use a [Docker](https://docker.com) container to spin up a fresh instance of the API I'm testing which is super easy with GitHub Actions.
