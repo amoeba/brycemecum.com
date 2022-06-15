@@ -1,44 +1,49 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="Description" content="{{page.title}}">
-    <title>{{ page.title }}</title>
-    {% capture styles %}
-      {% include styles.scss %}
-    {% endcapture %}
-    <style>
-      {{ styles | scssify }}
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1><a href="/">Bryce Mecum</a></h1>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="/projects/">Projects</a></li>
-        <li><a href="/teaching/">Teaching</a></li>
-        <li><a href="/talks/">Talks</a></li>
-        <li><a href="/posts">Posts</a></li>
-        <li><a href="/about/">About</a></li>
-        <li>
-          <a href="https://github.com/amoeba" aria-label="My GitHub Profile">GitHub</a>
-        </li>
-        <li>
-          <a href="https://twitter.com/brycem" aria-label="My Twitter Profile">Twitter</a>
-        </li>
-      </ul>
-    </nav>
-    <main class="{% if page.style %}{{ page.style }}{% endif %}">
-      {{content}}
-    </main>
-    <footer>
-      <a href="/feed.xml">
-        Posts RSS
-      </a>
-      </footer>
-      <script data-goatcounter="https://brycemecum.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Description" content="{{page.title}}">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>
+    {
+        {
+        styles | scssify
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1><a href="/">Bryce Mecum</a></h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/teaching/">Teaching</a></li>
+      <li><a href="/talks/">Talks</a></li>
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/about/">About</a></li>
+      <li>
+        <a href="https://github.com/amoeba" aria-label="My GitHub Profile">GitHub</a>
+      </li>
+      <li>
+        <a href="https://twitter.com/brycem" aria-label="My Twitter Profile">Twitter</a>
+      </li>
+    </ul>
+  </nav>
+  <main class="{% if page.style %}{{ page.style }}{% endif %}">
+    {{content}}
+  </main>
+  <footer>
+    <a href="/feed.xml">
+      Posts RSS
+    </a>
+  </footer>
+  <script data-goatcounter="https://brycemecum.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+
 </html>
