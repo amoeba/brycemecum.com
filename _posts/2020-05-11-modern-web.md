@@ -9,8 +9,10 @@ From [Second-guessing the modern web](https://macwright.org/2020/05/10/spa-fatig
 
 The four problematic areas Tom mentions, (bundle splitting, SSR, APIs, and data fetching) come out of his experience building really awesome things (e.g., at [Mapbox](https://www.mapbox.com) and [Observable](https://observablehq.com)) so he knows at least a bit about this. To build a "modern" JS application, I find myself having to write considerably more code and configure a multitude of additional libraries to get what I feel I used to get for free with, say, Ruby. And then I've still got problems I can't find good solutions for.
 
-(Related are [DHH](http://web.archive.org/web/20200511105458/https://twitter.com/dhh)
-'s [thoughts](https://railsconf.com/2020/video/david-heinemeier-hansson-keynote-interview-with-david-heinemeier-hansson) about building for the web he delivered at RailsConf last week.)
+(Related are [DHH](https://web.archive.org/web/20200511105458/https://twitter.com/dhh)
+
+'s [thoughts](http://web.archive.org/web/20200509110955/http://railsconf.com:80/2020/video/david-heinemeier-hansson-keynote-interview-with-david-heinemeier-hansson)
+ about building for the web he delivered at RailsConf last week.)
 
 Again from Tom's article, this gem is kind of hidden near the end:
 
