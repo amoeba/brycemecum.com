@@ -5,6 +5,9 @@ categories: ["post"]
 tags: ["macos", "software"]
 ---
 
-- BetterTouchTool
-- Rectangle
 - KarabinerElements
+- BetterTouchTool
+  - Scroll reversing for normal mice
+- Rectangle
+- Force Paste
+- Alfred
