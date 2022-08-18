@@ -11,7 +11,9 @@ title: About
 
 ### Work
 
-**2015 →** Scientific Software Engineer, National Center for Ecological Analysis and Synthesis (NCEAS)
+**2022 →** Open Source Support Engineer, [Voltron Data](https://voltrondata.com)
+
+**2015 – 2022** Scientific Software Engineer, [National Center for Ecological Analysis and Synthesis (NCEAS)](https://nceas.ucsb.edu)
 
 **2011 – 12** Fish & Wildlife Technician III, Alaska Department of Fish & Game, Wildlife Division, Juneau, AK, USA Bat and deer research. Worked as part of a field crew on Chichagof Island, AK, USA conducting deer research on Sitka Black-tailed Deer (Odocoileus hemionus sitkensis). Transitioned to a team conducting research on the multiple bat species of the Juneau, AK, USA area. Conducted acoustic monitoring, mist-netting, and radiotelemetry. Developed a database to manage GPS, acoustic, and other data related to this project.
 
