@@ -105,6 +105,6 @@ Overally, this is a bit finicky and I wish double-clicking on a `*.qlgenerator` 
 
 In the end, my preview for Parquet ended up looking like this:
 
-![Screenshot of a QuickLook preview dialog showing a summary of a file named orders_0.1.parquet]((/assets/{{page.slug}}/qlarrow-example.png))
+![Screenshot of a QuickLook preview dialog showing a summary of a file named orders_0.1.parquet](/assets/{{page.slug}}/qlarrow-example.png)
 
 I put the full source code for my plugin at [QLArrow](https://github.com/amoeba/QLArrow)
