@@ -25,4 +25,4 @@ title: About
 
 ### Honors & Awards
 
-**2013** Best Student Poster, Alaska Chapter of the American Fisheries Society**2013** Best Student Poster, Alaska Chapter of the American Fisheries Society
+**2013** Best Student Poster, Alaska Chapter of the American Fisheries Society
