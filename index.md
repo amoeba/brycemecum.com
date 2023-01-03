@@ -3,7 +3,7 @@ layout: front
 title: brycemecum.com
 ---
 
-Hi, I'm Bryce.
+Hi, I'm Bryce and this is my home on the web.
 
 I work on [Apache Arrow](https://arrow.apache.org/) at [Voltron Data](https://voltrondata.com).
 I used to work at [NCEAS](https://www.nceas.ucsb.edu/) making [software](https://github.com/nceas) and sometimes [teaching](/teaching) or giving [talks](/talks).
