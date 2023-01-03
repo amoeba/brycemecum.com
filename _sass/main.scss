@@ -35,6 +35,13 @@ header a:visited {
   color: black;
 }
 
+nav {
+  background-color: rgba(180, 0, 180, 0.3);
+  border: 1px solid blue;
+  padding: 0.5em;
+
+}
+
 header a,
 nav a {
   text-decoration: none;
@@ -42,6 +49,11 @@ nav a {
 
 nav a:visited {
   color: $color_link;
+}
+
+nav a:hover,
+header a:hover {
+  text-decoration: underline;
 }
 
 nav ul {
