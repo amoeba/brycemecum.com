@@ -8,4 +8,5 @@ group :jekyll_plugins do
   gem "jekyll-compose"
   gem "jekyll-archives"
   gem "jekyll-gist"
+  gem "jekyll-mermaid", github: "amoeba/jekyll-mermaid"
 end

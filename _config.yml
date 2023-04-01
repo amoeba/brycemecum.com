@@ -12,6 +12,7 @@ plugins:
   - jekyll-feed
   - jekyll-archives
   - jekyll-gist
+  - jekyll-mermaid
 sass:
   style: compressed
 
@@ -48,3 +49,6 @@ jekyll-archives:
     day: archive-day
     tag: archive-tag
     category: archive-category
+
+mermaid:
+  src: 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'

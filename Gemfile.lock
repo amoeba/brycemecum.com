@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/amoeba/jekyll-mermaid.git
+  revision: d48984478b8fcab87cc53e811e1c764cd921969e
+  specs:
+    jekyll-mermaid (1.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -93,6 +99,7 @@ DEPENDENCIES
   jekyll-compose
   jekyll-feed
   jekyll-gist
+  jekyll-mermaid!
   webrick
 
 BUNDLED WITH
