@@ -124,3 +124,16 @@ li > p {
 blockquote {
   font-style: italic;
 }
+
+// Tags
+
+.tag {
+  background-color: #eee;
+  padding: 0.25em 0.5em;
+  border-radius: 0.2em;
+}
+
+.tag a,
+.tag a:visited {
+  text-decoration: none;
+}
