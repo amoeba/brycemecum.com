@@ -22,24 +22,30 @@ nav {
   margin-bottom: 0.25rem;
 }
 
+header {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0.5em;
+}
+
+header div:last-child {
+  flex-grow: 2;
+  text-align: right;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  display: inline-block;
+}
+
 header h1 {
   font-size: 125%;
   margin: 0;
-}
-
-header a {
-  color: black;
-}
-
-header a:visited {
-  color: black;
-}
-
-nav {
-  background-color: rgba(180, 0, 180, 0.3);
-  border: 1px solid blue;
-  padding: 0.5em;
-
 }
 
 header a,
