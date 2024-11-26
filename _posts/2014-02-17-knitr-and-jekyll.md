@@ -29,7 +29,8 @@ function.
 
 Jekyll doesn’t have an easy way to let you write posts in RMarkdown
 directly but I found a simple solution from Jason C. Fisher [on his
-blog](http://web.archive.org/web/20140206154929/http://jfisher-usgs.github.io:80/r/2012/07/03/knitr-jekyll/)
+blog](https://web.archive.org/web/20140206154929/http://jfisher-usgs.github.io:80/r/2012/07/03/knitr-jekyll/)
+
 . He
 outlines a method for knitting his RMarkdown files manually and copying
 the resulting Markdown and images into the directory containing his
