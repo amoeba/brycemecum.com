@@ -2,15 +2,6 @@
 layout: default
 ---
 
-<div>
-  <span class="tag"><a href="/{{page.date | date: " %Y"}}">{{page.date | date: "%Y" }}</a></span>/<span
-    class="tag"></span><a href="/{{page.date | date: " %Y/%m"}}">{{page.date | date: "%m" }}</a></span>/<span
-    class="tag"></span><a href="/{{page.date | date: " %Y/%m/%d"}}">{{page.date | date: "%d"
-    }}</a></span>
-</div>
-
-<div>
-  Tagged {% for tag in page.tags %}<span class="tag"><a href="/tag/{{tag}}">{{ tag }}</a></span> {% endfor %}
-</div>
-
 {{content}}
+
+{% include heading.html %}
