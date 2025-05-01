@@ -1,10 +1,12 @@
-<p>
-  Posted
-  <span class="tag"><a href="/{{ page.date | date: "%Y"}}">{{page.date | date: "%Y" }}</a></span>/
-  <span class="tag"><a href="/{{ page.date | date: "%Y/%m"}}">{{page.date | date: "%m" }}</a></span>/<span
-    class="tag"><a href="/{{page.date | date: "%Y/%m/%d"}}">{{page.date | date: "%d" }}</a></span>
-</p>
+<div class="frontmatter">
+  <p>
+    Posted
+    <span class="tag"><a href="/{{ page.date | date: " %Y"}}">{{page.date | date: "%Y" }}</a></span>/
+    <span class="tag"><a href="/{{ page.date | date: " %Y/%m"}}">{{page.date | date: "%m" }}</a></span>/<span
+      class="tag"><a href="/{{page.date | date: " %Y/%m/%d"}}">{{page.date | date: "%d" }}</a></span>
+  </p>
 
-<p>
-  Tagged {% for tag in page.tags %}<span class="tag"><a href="/tag/{{tag}}">{{ tag }}</a></span> {% endfor %}
-</p>
+  <p class="frontmatter">
+    Tagged {% for tag in page.tags %}<span class="tag"><a href="/tag/{{tag}}">{{ tag }}</a></span> {% endfor %}
+  </p>
+</div>

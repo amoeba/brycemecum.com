@@ -144,3 +144,9 @@ blockquote {
 .tag a:visited {
   text-decoration: none;
 }
+
+// Post Frontmatter
+.frontmatter > p {
+  margin: 0;
+  padding-block: 0.15lh;
+}
