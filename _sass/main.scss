@@ -92,7 +92,9 @@ footer a:visited {
   text-decoration: none;
 }
 
-p { margin-block: 1lh; }
+p {
+  margin-block: 1lh;
+}
 
 pre {
   border: 1px solid #ddd;
@@ -126,7 +128,7 @@ img {
   margin: 1.5rem 0;
 }
 
-li > p {
+li>p {
   margin: 0.25em 0;
 }
 
@@ -147,7 +149,7 @@ blockquote {
 }
 
 // Post Frontmatter
-.frontmatter > p {
+.frontmatter>p {
   margin: 0;
   padding-block: 0.25lh;
 }
