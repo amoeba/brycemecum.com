@@ -5,7 +5,7 @@ title: brycemecum.com
 
 Hi, I'm Bryce and this is my home on the web.
 
-I'm currently working at [Columnar](https://columnar.tech) on [Apache Arrow](https://arrow.apache.org), mostly [ADBC](https://arrow.apache.org/adbc) and am a member of the Apache Arrow PMC. I was previously at [Voltron Data](https://voltrondata.com) supporting enterprises on Arrow and more.
+I'm currently working at [Columnar](https://columnar.tech) on [Apache Arrow](https://arrow.apache.org), mostly on [ADBC](https://arrow.apache.org/adbc), and am a member of the Apache Arrow PMC. I was previously at [Voltron Data](https://voltrondata.com) supporting enterprises on Arrow and more.
 
 Before my time in the private sector, I was at [NCEAS](https://www.nceas.ucsb.edu/) making [software](https://github.com/nceas) and sometimes [teaching](/teaching) or giving [talks](/talks).
 
