@@ -3,6 +3,10 @@
 $width: 640px;
 $color_link: #1933cd;
 
+:root {
+  --blockquote-bg: rgba(200, 200, 100, 0.2);
+}
+
 a {
   color: $color_link;
   text-decoration-skip-ink: auto;
@@ -97,11 +101,12 @@ p {
 }
 
 pre {
+  background-color: var(--blockquote-bg);
   border: 1px solid #ddd;
   border-radius: 3px;
-  font-size: 12px;
+  font-size: inherit;
   padding: 0.5rem;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 p.update {
