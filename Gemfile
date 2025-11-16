@@ -10,5 +10,5 @@ group :jekyll_plugins do
   gem "jekyll-gist", github: "amoeba/jekyll-gist"
   gem "jekyll-mermaid", github: "amoeba/jekyll-mermaid"
   gem 'jekyll-seo-tag'
-  gem "jekyll-og-image", path: "~/src/amoeba/jekyll-og-image"
+  gem "jekyll-og-image"
 end
