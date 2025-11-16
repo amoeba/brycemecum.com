@@ -13,6 +13,8 @@ plugins:
   - jekyll-archives
   - jekyll-gist
   - jekyll-mermaid
+  - jekyll-seo-tag
+  - jekyll-og-image
 sass:
   style: compressed
 
@@ -66,4 +68,3 @@ og_image:
     height: 630
   header:
     color: "#1933cd"
-  verbose: true
