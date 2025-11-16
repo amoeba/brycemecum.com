@@ -9,4 +9,5 @@ group :jekyll_plugins do
   gem "jekyll-archives"
   gem "jekyll-gist", github: "amoeba/jekyll-gist"
   gem "jekyll-mermaid", github: "amoeba/jekyll-mermaid"
+  gem "jekyll-og-image"
 end

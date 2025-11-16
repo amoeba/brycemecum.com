@@ -36,13 +36,13 @@ collections:
 
 jekyll-archives:
   enabled: all
-  layout: 'archive'
+  layout: "archive"
   permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    day: '/:year/:month/:day/'
-    tag: '/tag/:name/'
-    category: '/category/:name/'
+    year: "/:year/"
+    month: "/:year/:month/"
+    day: "/:year/:month/:day/"
+    tag: "/tag/:name/"
+    category: "/category/:name/"
   layouts:
     year: archive-year
     month: archive-month
@@ -51,7 +51,19 @@ jekyll-archives:
     category: archive-category
 
 mermaid:
-  src: 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'
+  src: "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"
 
 gist:
   noscript: false
+
+og_image:
+  collections: ["posts", "pages"]
+  output_dir: assets/images/og
+  domain: brycemecum.com
+  canvas:
+    background_color: "#fffff0"
+    width: 1200
+    height: 630
+  header:
+    color: "#1933cd"
+  verbose: true
