@@ -22,20 +22,11 @@ body {
   padding: 0.5rem;
 }
 
-header,
-nav {
-  margin-bottom: 0.25rem;
-}
-
 header {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  margin-bottom: 0.5em;
-}
-
-header div:last-child {
-  flex-grow: 2;
-  text-align: right;
+  gap: 0.5em;
 }
 
 header ul {
@@ -52,6 +43,23 @@ header h1 {
   font-size: 125%;
   margin: 0;
 }
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.social-links a:hover {
+  opacity: 0.7;
+}
+
 
 header a,
 nav a {
