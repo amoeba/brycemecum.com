@@ -10,5 +10,6 @@ group :jekyll_plugins do
   gem "jekyll-gist", github: "amoeba/jekyll-gist"
   gem "jekyll-mermaid", github: "amoeba/jekyll-mermaid"
   gem 'jekyll-seo-tag'
+  gem "jekyll-redirect-from"
   gem "jekyll-og-image"
 end

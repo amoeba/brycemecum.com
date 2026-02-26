@@ -15,6 +15,7 @@ plugins:
   - jekyll-mermaid
   - jekyll-seo-tag
   - jekyll-og-image
+  - jekyll-redirect-from
 sass:
   style: compressed
 
